@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+<body>
+    <center>
+        <h1>CALCULATOR</h1>
+        <table style="width:330px" style="background-color: black;" height="500px" >
+      
+        <input type="text"place holder="0" id="re">
+        
+            <tr>
+                <td><button onclick="dis('7')">7</button></td>
+                <td><button onclick="dis('8')">8</button></td>
+                <td><button onclick="dis('9')">9</button></td>
+                <td><button onclick="dis('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="dis('4')">4</button></td>
+                <td><button onclick="dis('5')">5</button></td>
+                <td><button onclick="dis('6')">6</button></td>
+                <td><button onclick="dis('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="dis('1')">1</button></td>
+                <td><button onclick="dis('2')">2</button></td>
+                <td><button onclick="dis('3')">3</button></td>
+                <td><button onclick="dis('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="dis('0')">0</button></td>
+                <td><button onclick="clr()">c</button></td>
+                 
+                <td><button onclick="dis('/')">/</button></td>
+                <td><button onclick="dis('()')">()</button></td>
+            </tr>
+            <tr >
+                <td><button onclick="dis('.')">.</button></td>
+                <td><button onclick="dis('%')">%</button></td>
+                <td><button onclick="backSpace()">⌫</button></td>
+                <td style="background-color: rgb(7, 21, 4);" ><button onclick="cal()">=</button></td>
+
+            </tr>
+        </table>
+  
+       
+    </center>
+
+    
+</body>
+<style>
+    input{
+        border-radius: 25px;
+        border-width:5px ;
+        border-color: black;
+    }
+    button{
+        border-radius: 25px;
+    }
+
+   table{
+    background-color: black;
+    border-radius: 25px;
+        border-width:5px ;
+    border : 5px solid black;
+    color: black;
+   }
+    button{
+        height:100px;
+        width: 100px;
+        background-color:rgb(198, 237, 250)
+        
+         
+    }
+    button{
+        color:rgb(19, 18, 18);
+        height: 70px;
+        width: 70px;
+    }
+    #re{
+        height: 70px;
+        width: 280px;
+        color:rgb(78, 64, 72)
+    }
+    button #p{
+        height: 70px;
+        width: 70px;
+    }
+body{
+    background-color: lightgoldenrodyellow;
+}
+</style>
+<script>
+    var out=document.getElementById('re')
+    {
+        function dis(num)
+        {
+            out.value+=num
+        }
+        function cal()
+        {
+            try{
+                out.value=eval(out.value)
+            }
+            catch(err)
+            {
+                alert("Invalid")
+            }
+        }
+        function clr()
+        {
+            out.value=0
+        }
+        }
+        
+</script>
+</html>
